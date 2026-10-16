@@ -1,0 +1,22 @@
+timestamp,service,level,message
+2026-10-16 09:00:00,auth-service,INFO,User login successful
+2026-10-16 09:00:05,payment-service,INFO,Payment request received
+2026-10-16 09:00:10,auth-service,WARN,Repeated login attempt detected
+2026-10-16 09:00:15,order-service,INFO,Order created successfully
+2026-10-16 09:00:20,payment-service,ERROR,PaymentTimeoutError: payment gateway timed out
+2026-10-16 09:00:25,payment-service,ERROR,PaymentTimeoutError: payment gateway timed out
+2026-10-16 09:00:30,auth-service,INFO,User logout successful
+2026-10-16 09:01:00,order-service,WARN,Inventory response was slow
+2026-10-16 09:01:05,payment-service,ERROR,ConnectionError: database connection failed
+2026-10-16 09:01:10,payment-service,ERROR,ConnectionError: database connection failed
+2026-10-16 09:01:15,payment-service,ERROR,ConnectionError: database connection failed
+2026-10-16 09:01:20,auth-service,INFO,User login successful
+2026-10-16 09:01:25,order-service,INFO,Order created successfully
+2026-10-16 09:02:00,auth-service,ERROR,AuthenticationError: invalid token
+2026-10-16 09:02:05,auth-service,ERROR,AuthenticationError: invalid token
+2026-10-16 09:02:10,order-service,INFO,Order dispatched
+2026-10-16 09:02:15,payment-service,INFO,Payment completed successfully
+2026-10-16 09:03:00,order-service,ERROR,DatabaseError: failed to fetch order
+2026-10-16 09:03:05,order-service,WARN,Retrying database request
+2026-10-16 09:03:10,auth-service,INFO,User login successful
+2026-10-16 09:03:15,payment-service,INFO,Payment completed successfully

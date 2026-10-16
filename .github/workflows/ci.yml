@@ -1,0 +1,35 @@
+name: Log Triage Engine CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Check formatting with Black
+        run: black --check app.py log_analyzer.py tests/
+
+      - name: Lint with Flake8
+        run: flake8 app.py log_analyzer.py tests/ --max-line-length=88
+
+      - name: Run automated tests
+        run: python -m pytest -v
+
+      - name: Validate Docker image build
+        run: docker build -t log-triage-engine:ci .python -m black --check app.py log_analyzer.py tests/
