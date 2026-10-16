@@ -32,4 +32,4 @@ jobs:
         run: python -m pytest -v
 
       - name: Validate Docker image build
-        run: docker build -t log-triage-engine:ci .python -m black --check app.py log_analyzer.py tests/
+        run: docker build -t log-triage-engine:ci .
