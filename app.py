@@ -16,7 +16,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Microservice Log Anomaly & Error Triage Engine")
+st.title("Microservice Log Anomaly & Error Triage Engine 1.0")
 st.caption(
     "Analyze application logs, identify error spikes, and investigate exceptions."
 )
